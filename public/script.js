@@ -63,26 +63,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // A static GitHub Pages site has no form backend. Prepare an email draft instead
-  // of showing a misleading "sent" message or silently discarding a quote request.
+  // Store quote requests through the Worker API; the mailto action is a fallback
+  // for GitHub Pages and for visitors whose request cannot reach the backend.
   const form = document.getElementById("contact-form");
   if (form) {
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
-
-      const values = new FormData(form);
-      const fields = [...values.entries()];
-      const recipient = form.dataset.recipient;
-      const name = values.get("name");
-      const business = values.get("business");
-      const subject = `Website quote request${business ? ` — ${business}` : name ? ` — ${name}` : ""}`;
-      const body = fields.map(([label, value]) => `${label}: ${value}`).join("\n");
+      const submitButton = form.querySelector("button[type='submit']");
       const status = document.getElementById("form-status");
+      const payload = Object.fromEntries(new FormData(form).entries());
 
-      if (status) {
-        status.textContent = `Your email app should open with this draft. If it doesn't, email ${recipient} directly.`;
+      if (status) status.textContent = "Sending your request securely…";
+      if (submitButton) submitButton.disabled = true;
+
+      try {
+        const response = await fetch("/api/leads", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(result.error || "Your request could not be saved.");
+
+        if (status) status.textContent = "Thanks — your quote request was saved. Devante will follow up using the contact details you provided.";
+        form.reset();
+      } catch (error) {
+        if (status) {
+          status.replaceChildren(document.createTextNode(`${error.message} Please email `));
+          const emailLink = document.createElement("a");
+          emailLink.href = "mailto:devanteallen0@gmail.com";
+          emailLink.textContent = "devanteallen0@gmail.com";
+          const phoneLink = document.createElement("a");
+          phoneLink.href = "tel:6026098069";
+          phoneLink.textContent = "602-609-8069";
+          status.append(emailLink, document.createTextNode(" or call "), phoneLink, document.createTextNode(" instead."));
+        }
+      } finally {
+        if (submitButton) submitButton.disabled = false;
       }
-      window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   }
 

@@ -1027,6 +1027,42 @@ img {
   line-height: 1.5;
 }
 
+.form-note a,
+.privacy-consent a {
+  color: #93c5fd;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.privacy-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.privacy-consent input {
+  flex: 0 0 auto;
+  width: auto;
+  margin-top: 4px;
+  accent-color: var(--accent);
+}
+
+.form-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ========================================
    Footer
    ======================================== */

@@ -1,0 +1,17 @@
+{
+  "name": "southwest-site-builders",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --local --ip 0.0.0.0 --inspector-ip 127.0.0.1",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create southwest-site-builders",
+    "db:migrate:local": "wrangler d1 migrations apply southwest-site-builders --local",
+    "db:migrate:remote": "wrangler d1 migrations apply southwest-site-builders --remote",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
