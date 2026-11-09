@@ -1,0 +1,369 @@
+/* ========================================
+   Southwest Site Builders — Portfolio Concept Sites
+   Shared styles for individual business concept pages
+   ======================================== */
+
+:root {
+  --primary: #0f172a;
+  --primary-dark: #020617;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --bg: #ffffff;
+  --bg-soft: #f8fafc;
+  --border: #e2e8f0;
+  --shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.12);
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.concept-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Concept banner (builder credit) */
+.concept-banner {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 0;
+  font-size: 0.85rem;
+}
+
+.concept-banner .concept-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.concept-badge {
+  background: rgba(255,255,255,0.15);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-weight: 700;
+  color: #93c5fd;
+}
+
+.concept-back {
+  color: #93c5fd;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.concept-back:hover { color: #fff; }
+
+/* Nav */
+.concept-nav {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.concept-nav .concept-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.concept-logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: flex;
+  gap: 6px;
+}
+
+.concept-logo span { color: var(--accent); }
+
+.concept-btn-emergency {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.concept-btn-emergency:hover { background: var(--accent-hover); }
+
+.concept-mobile-menu { display: none; font-size: 1.5rem; cursor: pointer; }
+
+/* Hero */
+.concept-hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #fff;
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+
+.concept-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.concept-hero p {
+  font-size: 1.125rem;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto 24px;
+}
+
+.concept-hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.concept-btn-primary {
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.concept-btn-primary:hover { background: var(--accent-hover); }
+
+.concept-btn-secondary {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.concept-btn-secondary:hover { background: rgba(255,255,255,0.25); }
+
+.concept-trust {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* Sections */
+.concept-services,
+.concept-service-area,
+.concept-reviews,
+.concept-promotions,
+.concept-trades,
+.concept-emergency,
+.concept-contact,
+.concept-gallery {
+  padding: 70px 20px;
+}
+
+.concept-services { background: var(--bg); }
+.concept-service-area { background: var(--bg-soft); }
+.concept-reviews { background: var(--bg); }
+.concept-promotions { background: var(--bg-soft); }
+.concept-trades { background: var(--bg); }
+.emergency-box, .concept-emergency { background: var(--bg); }
+.concept-contact { background: var(--primary); color: #fff; }
+.concept-gallery { background: var(--bg-soft); }
+
+.concept-container h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.concept-container > p {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.concept-contact h2 { color: #fff; }
+.concept-contact .concept-container > p { color: #93c5fd; }
+
+/* Grids */
+.concept-services-grid,
+.concept-trades-grid,
+.concept-promos-grid,
+.concept-reviews-grid,
+.concept-gallery-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.concept-service-card,
+.concept-trade-card,
+.concept-promo-card,
+.concept-review,
+.concept-gallery-item {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.concept-service-card h3,
+.concept-trade-card h3,
+.concept-promo-card h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.concept-service-card p,
+.concept-trade-card p,
+.concept-promo-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.concept-trade-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+
+.concept-promo-tag {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.concept-stars { color: #fbbf24; font-size: 1.25rem; margin-bottom: 8px; }
+
+.concept-review p { color: var(--text-muted); margin: 0 0 8px; }
+.concept-reviewer { display: block; font-weight: 700; color: var(--primary); }
+
+.concept-gallery-item {
+  background: var(--bg-soft);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  font-weight: 600;
+}
+
+.concept-emergency-box {
+  background: var(--accent);
+  color: #fff;
+  padding: 40px 24px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.concept-emergency-box h2 { color: #fff; margin-bottom: 12px; }
+.concept-emergency-box p { color: #bae6fd; margin-bottom: 20px; }
+.concept-btn-large { padding: 16px 32px; font-size: 1.1rem; }
+
+/* Contact form */
+.concept-contact-info {
+  color: #fff;
+  max-width: 320px;
+}
+
+.concept-contact-info strong { display: block; color: #fff; margin-bottom: 6px; font-size: 1.05rem; }
+.concept-contact-info p { color: #cbd5e1; margin-bottom: 6px; font-size: 0.95rem; }
+.concept-contact-info a { color: #93c5fd; font-weight: 600; }
+
+.concept-form {
+  background: rgba(255,255,255,0.05);
+  padding: 32px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.concept-form-row { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+
+.concept-form-group {
+  margin-bottom: 18px;
+}
+
+.concept-form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 8px;
+}
+
+.concept-form-group input,
+.concept-form-group select,
+.concept-form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.concept-btn-block { width: 100%; padding: 16px; font-size: 1rem; }
+
+/* Footer */
+.concept-footer {
+  background: var(--primary-dark);
+  color: #94a3b8;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.concept-footer strong { color: #fff; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .concept-form-row { grid-template-columns: 1fr; }
+  .concept-hero-actions { flex-direction: column; }
+}
