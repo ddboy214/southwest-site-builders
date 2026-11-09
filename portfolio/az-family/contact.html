@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Bumble Bee Home Services | Glendale, AZ</title>
-  <meta name="description" content="Contact Bumble Bee Home Services for plumbing, HVAC, or electrical service in Glendale, AZ. Concept by Southwest Site Builders."/>
+  <title>Contact AZ Family Plumbing Co. | Glendale, AZ</title>
+  <meta name="description" content="Contact AZ Family Plumbing Co LLC for plumbing service in Glendale, AZ. Free estimates and 24/7 emergency plumbing. Concept by Southwest Site Builders."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../shared-style.css"/>
@@ -20,7 +20,7 @@
 
   <nav class="navbar">
     <div class="nav-container">
-      <a href="index.html" class="logo">BUMBLE<span>BEE</span></a>
+      <a href="index.html" class="logo">AZ<span>FAMILY</span></a>
       <div class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
@@ -28,7 +28,7 @@
         <a href="contact.html" class="nav-link active">Contact</a>
       </div>
       <div class="nav-cta">
-        <a href="tel:6024042566" class="btn-primary">📞 (602) 404-2566</a>
+        <a href="tel:6232268876" class="btn-primary">📞 (623) 226-8876</a>
       </div>
       <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
     </div>
@@ -36,9 +36,9 @@
 
   <header class="hero" style="padding-top: 100px; padding-bottom: 80px;">
     <div class="hero-content">
-      <div class="hero-badge">24/7 Emergency • Free Phone Estimates</div>
+      <div class="hero-badge">Free Estimates • 24/7 Emergency Plumbing</div>
       <h1>Contact Us</h1>
-      <p>One call handles your plumbing, HVAC, or electrical need.</p>
+      <p>Get your free plumbing estimate or schedule emergency service today.</p>
     </div>
   </header>
 
@@ -53,16 +53,16 @@
           <div class="contact-icon">📞</div>
           <div>
             <strong>Call or Text</strong>
-            <a href="tel:6024042566">(602) 404-2566</a>
-            <p style="margin-top: 6px; font-size: 0.9rem; color: var(--text-muted);">Emergency line answered 24/7</p>
+            <a href="tel:6232268876">(623) 226-8876</a>
+            <p style="margin-top: 6px; font-size: 0.9rem; color: var(--text-muted);">Emergency plumbing 24/7</p>
           </div>
         </div>
         <div class="contact-card fade-in">
           <div class="contact-icon">✉️</div>
           <div>
             <strong>Email</strong>
-            <a href="mailto:mike@bumblebeehomeservices.com">mike@bumblebeehomeservices.com</a>
-            <p style="margin-top: 6px; font-size: 0.9rem; color: var(--text-muted);">Owner responds directly</p>
+            <a href="mailto:info@azfamilyplumbing.com">info@azfamilyplumbing.com</a>
+            <p style="margin-top: 6px; font-size: 0.9rem; color: var(--text-muted);">Family-owned, family-responsive</p>
           </div>
         </div>
         <div class="contact-card fade-in">
@@ -78,7 +78,7 @@
 
       <div style="margin-top: 60px;">
         <div class="contact-form-wrap fade-in">
-          <form>
+          <form data-recipient="info@azfamilyplumbing.com" action="mailto:info@azfamilyplumbing.com" method="post" enctype="text/plain">
             <div class="form-group">
               <label for="name">Full Name</label>
               <input type="text" id="name" name="name" placeholder="John Smith" required/>
@@ -92,20 +92,22 @@
               <input type="email" id="email" name="email" placeholder="john@example.com" required/>
             </div>
             <div class="form-group">
-              <label for="trade">Trade Needed</label>
-              <select id="trade" name="trade" required>
-                <option value="">Select a trade</option>
-                <option value="plumbing">Plumbing</option>
-                <option value="hvac">HVAC (Heating &amp; Cooling)</option>
-                <option value="electrical">Electrical</option>
-                <option value="emergency">Emergency Service (24/7)</option>
+              <label for="service">Plumbing Service Needed</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="emergency">Emergency Plumbing (24/7)</option>
+                <option value="residential">Residential Plumbing Repair</option>
+                <option value="water-heater">Water Heater Repair &amp; Installation</option>
+                <option value="drain-sewer">Drain &amp; Sewer Service</option>
+                <option value="inspection">Whole-Home Plumbing Inspection</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="message">Describe Your Issue</label>
+              <label for="message">Describe Your Plumbing Issue</label>
               <textarea id="message" name="message" rows="4" placeholder="What's happening?..."></textarea>
             </div>
-            <button type="submit" class="btn-primary btn-block">Send Request</button>
+            <button type="submit" class="btn-primary btn-block">Open Email App to Send Request</button>
+            <p class="form-status" role="status" aria-live="polite">Portfolio concept only: this form prepares an email to info@azfamilyplumbing.com; it does not send or store information on this website.</p>
           </form>
         </div>
       </div>
@@ -121,26 +123,26 @@
       <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 900px; margin: 0 auto;">
         <div class="card fade-in">
           <div class="card-body">
+            <h3 style="margin-bottom: 8px;">Are you family-owned?</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Yes — locally owned and operated in Glendale, AZ.</p>
+          </div>
+        </div>
+        <div class="card fade-in">
+          <div class="card-body">
+            <h3 style="margin-bottom: 8px;">Are you licensed and insured?</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Yes — fully licensed Arizona plumber with insurance.</p>
+          </div>
+        </div>
+        <div class="card fade-in">
+          <div class="card-body">
             <h3 style="margin-bottom: 8px;">Do you offer emergency service?</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Yes — 24/7 emergency plumbing, HVAC, and electrical.</p>
-          </div>
-        </div>
-        <div class="card fade-in">
-          <div class="card-body">
-            <h3 style="margin-bottom: 8px;">Are you licensed?</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Yes — fully licensed and insured for all three trades.</p>
-          </div>
-        </div>
-        <div class="card fade-in">
-          <div class="card-body">
-            <h3 style="margin-bottom: 8px;">Do you give free estimates?</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Yes — free phone estimates and free in-home quotes for larger jobs.</p>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Yes — 24/7 emergency plumbing for burst pipes and urgent repairs.</p>
           </div>
         </div>
         <div class="card fade-in">
           <div class="card-body">
             <h3 style="margin-bottom: 8px;">What areas do you serve?</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Glendale, Peoria, Surprise, Sun City, and the greater Phoenix metro area.</p>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Glendale, Peoria, Surprise, and the greater Phoenix metro area.</p>
           </div>
         </div>
       </div>
@@ -151,8 +153,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="footer-logo">BUMBLE<span>BEE</span></a>
-          <p>Locally owned home services — plumbing, HVAC, and electrical.</p>
+          <a href="index.html" class="footer-logo">AZ<span>FAMILY</span></a>
+          <p>Family-owned plumbing for Glendale — licensed, insured, treated like family.</p>
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
@@ -165,15 +167,15 @@
         <div class="footer-col">
           <h4>Emergency</h4>
           <ul>
-            <li>📞 <a href="tel:6024042566">(602) 404-2566</a></li>
-            <li>✉️ <a href="mailto:mike@bumblebeehomeservices.com">mike@bumblebeehomeservices.com</a></li>
+            <li>📞 <a href="tel:6232268876">(623) 226-8876</a></li>
+            <li>✉️ <a href="mailto:info@azfamilyplumbing.com">info@azfamilyplumbing.com</a></li>
             <li>📍 Glendale, Arizona</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>Concept website built by <strong>Southwest Site Builders</strong> — Devante Allen, Glendale, AZ.</p>
-        <p>&copy; 2026 Bumble Bee Home Services — Concept Demo. Not a live business site.</p>
+        <p>&copy; 2026 AZ Family Plumbing Co LLC — Concept Demo. Not a live business site.</p>
       </div>
     </div>
   </footer>

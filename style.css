@@ -1020,6 +1020,13 @@ img {
   cursor: not-allowed;
 }
 
+.form-note {
+  margin-top: 14px;
+  color: #cbd5e1;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
 /* ========================================
    Footer
    ======================================== */

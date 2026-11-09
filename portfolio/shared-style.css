@@ -583,6 +583,13 @@ img { max-width: 100%; display: block; }
 
 .form-group textarea { resize: vertical; min-height: 140px; }
 
+.form-status {
+  margin-top: 16px;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
 /* Footer */
 .footer {
   background: var(--bg);
