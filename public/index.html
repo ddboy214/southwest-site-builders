@@ -423,6 +423,10 @@
           </div>
         </div>
         <form class="contact-form" id="contact-form" data-recipient="devanteallen0@gmail.com" action="mailto:devanteallen0@gmail.com" method="post" enctype="text/plain">
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="website">Leave this field empty</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off"/>
+          </div>
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" required/>
@@ -452,8 +456,13 @@
             <label for="message">Tell me about your business</label>
             <textarea id="message" name="message" rows="4" placeholder="What do you do, and what do you want your website to accomplish?"></textarea>
           </div>
-          <button type="submit" class="btn-primary btn-block" id="submit-btn">Open Email to Request a Quote</button>
-          <p class="form-note" id="form-status" role="status" aria-live="polite">This static-site form opens a prefilled email draft; it does not store or send your details on this website.</p>
+          <div class="privacy-consent">
+            <input type="checkbox" id="consent" name="consent" value="yes" required/>
+            <label for="consent">I agree that Devante may use these details to respond to my request. See the <a href="privacy.html">privacy notice</a>.</label>
+          </div>
+          <button type="submit" class="btn-primary btn-block" id="submit-btn">Send Quote Request</button>
+          <p class="form-note" id="form-status" role="status" aria-live="polite">Submitting saves your inquiry in the private owner dashboard. If the form is unavailable, email <a href="mailto:devanteallen0@gmail.com">devanteallen0@gmail.com</a>.</p>
+          <p class="form-note">This website does not send automatic email alerts. New inquiries can be reviewed in the private owner dashboard.</p>
         </form>
       </div>
     </div>
@@ -483,6 +492,7 @@
             <li><a href="#process">Process</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#faq">FAQ</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
           </ul>
         </div>
         <div class="footer-contact">
