@@ -27,7 +27,7 @@
         <li><a href="#faq" class="nav-link">FAQ</a></li>
         <li><a href="#contact" class="nav-link btn-nav">Get a Free Quote</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -418,11 +418,11 @@
             </div>
           </div>
           <div class="socials">
-            <a href="#" class="social-link">LinkedIn</a>
-            <a href="#" class="social-link">Instagram</a>
+            <a href="mailto:devanteallen0@gmail.com" class="social-link">Email Devante</a>
+            <a href="tel:6026098069" class="social-link">Call Devante</a>
           </div>
         </div>
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form" id="contact-form" data-recipient="devanteallen0@gmail.com" action="mailto:devanteallen0@gmail.com" method="post" enctype="text/plain">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" required/>
@@ -452,7 +452,8 @@
             <label for="message">Tell me about your business</label>
             <textarea id="message" name="message" rows="4" placeholder="What do you do, and what do you want your website to accomplish?"></textarea>
           </div>
-          <button type="submit" class="btn-primary btn-block" id="submit-btn">Request Free Quote</button>
+          <button type="submit" class="btn-primary btn-block" id="submit-btn">Open Email to Request a Quote</button>
+          <p class="form-note" id="form-status" role="status" aria-live="polite">This static-site form opens a prefilled email draft; it does not store or send your details on this website.</p>
         </form>
       </div>
     </div>
